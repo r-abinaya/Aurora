@@ -1,3 +1,4 @@
+import 'package:aurora/pages/pages.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_database/firebase_database.dart';
 
@@ -14,15 +15,7 @@ class _ProfileState extends State<DonateDet> {
   String name = '';
   String location = '';
   String dietPreference = '';
-  final userfdetController = TextEditingController();
-  final userqntyController = TextEditingController();
-  final usernopController = TextEditingController();
-  final userCookController = TextEditingController();
-  final userexpController = TextEditingController();
-  final userdesController = TextEditingController();
-  late DatabaseReference dbef  = FirebaseDatabase.instance.ref().child('Food');
-
-  //dbef = FirebaseDatabase.instance.ref().child('Food');
+  
 
   @override
   Widget build(BuildContext context) {
@@ -54,7 +47,7 @@ class _ProfileState extends State<DonateDet> {
             ),
             const SizedBox(height: 8.0),
             TextField(
-  controller:userqntyController ,
+  
 
               decoration: const InputDecoration(
                 border: OutlineInputBorder(),
@@ -76,7 +69,6 @@ class _ProfileState extends State<DonateDet> {
             ),
             const SizedBox(height: 8.0),
             TextField(
-               controller:userCookController,
               decoration: const InputDecoration(
                 border: OutlineInputBorder(),
                 hintText: 'Enter cooked time',
@@ -97,7 +89,7 @@ class _ProfileState extends State<DonateDet> {
             ),
             const SizedBox(height: 8.0),
             TextField(
-               controller:userexpController,
+              
               decoration: const InputDecoration(
                 border: OutlineInputBorder(),
                 hintText: 'Enter expiry time',
@@ -118,8 +110,7 @@ class _ProfileState extends State<DonateDet> {
             ),
             const SizedBox(height: 8.0),
             TextField(
-               controller:userdesController,
-              decoration: const InputDecoration(
+                         decoration: const InputDecoration(
                 border: OutlineInputBorder(),
                 hintText: 'Eg:Rice,sambar,etc..',
               ),
@@ -138,14 +129,6 @@ class _ProfileState extends State<DonateDet> {
                 ),
                 child: const Text('Save'),
                 onPressed: () {
-                  Map<String,String> food = {
-                    'des':userdesController.text,
-                    'qnty':userqntyController.text,
-                    'cook':userCookController.text,
-                    'exp':userexpController.text
-                  };
-                  dbef.push().set(food);
-
                   // Save profile information here
                 },
               ),
