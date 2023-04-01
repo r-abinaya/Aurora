@@ -6,5 +6,8 @@ export 'signup.dart';
 export 'profile.dart';
 export 'login.dart';
 //export 'firebase.dart';
+export 'home.dart';
+export 'pickup.dart'; 
+export 'done.dart';
 export 'chooseopt.dart';
 export 'donateRestDet.dart';
