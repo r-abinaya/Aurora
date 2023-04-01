@@ -1,7 +1,11 @@
+import 'package:aurora/pages/res_profile.dart';
 import 'package:flutter/material.dart';
 import 'package:aurora/pages/pages.dart';
+import 'package:firebase_core/firebase_core.dart';
 
-void main() {
+void main() async{
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
   runApp(const MyApp());
 }
 
@@ -14,12 +18,23 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: const Loading(),
       title: 'Aurora',
       //home: const Loading(),
       theme: ThemeData(
         primaryColor: const Color.fromARGB(255, 110, 212, 159),
       ),
+      routes:{
+        '/': (context) => const Loading(),
+        '/login': (context) => const LogIn(),
+        '/chooseOpt': (context) => const ChooseOption(),
+        '/char_profile': (context) => const CharProfile(),
+        '/donateDet': (context) => const DonateDet(),
+        '/done': (context) => const Done(),
+        '/home': (context) => const Home(),
+        '/pickup': (context) => const PickUp(),
+        '/res_profile': (context) => const Profile(),
+
+      },
     );
   }
 }
