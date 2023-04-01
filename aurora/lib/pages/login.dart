@@ -42,9 +42,12 @@ class LogIn extends StatelessWidget {
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 25),
                 child: ElevatedButton(
+                style: ButtonStyle(
+                  backgroundColor: MaterialStateProperty.all(const Color.fromRGBO(47, 155, 142, 1)),
+                ),
                 onPressed: ()
                 {
-                    
+                     Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => const ChooseOption()));
                 },
                 child: const Padding(
                     padding: EdgeInsets.all(15),

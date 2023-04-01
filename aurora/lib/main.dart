@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: const Profile(),
+      home: const Loading(),
       title: 'Aurora',
       //home: const Loading(),
       theme: ThemeData(
