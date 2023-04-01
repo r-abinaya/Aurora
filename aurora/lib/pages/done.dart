@@ -1,3 +1,5 @@
+import "package:aurora/pages/donateRestDet.dart";
+import "package:aurora/pages/pages.dart";
 import "package:flutter/material.dart";
 
 class Done extends StatelessWidget {
@@ -21,7 +23,7 @@ class Done extends StatelessWidget {
                     const EdgeInsets.symmetric(horizontal: 8, vertical: 25),
                 child: ElevatedButton(
                     onPressed: () {
-                       //Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => const Home()));
+                      Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => const Home()));
                     },
                     child: const Padding(
                       padding: EdgeInsets.all(15),
