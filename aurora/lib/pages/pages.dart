@@ -6,3 +6,4 @@ export 'signup.dart';
 export 'profile.dart';
 export 'login.dart';
 export 'chooseopt.dart';
+export 'donateRestDet.dart';

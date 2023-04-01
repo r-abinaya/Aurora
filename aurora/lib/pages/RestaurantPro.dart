@@ -1,14 +1,13 @@
-import 'package:aurora/pages/pages.dart';
 import 'package:flutter/material.dart';
 
-class Profile extends StatefulWidget {
-  const Profile({super.key});
+class RestProfile extends StatefulWidget {
+  const RestProfile({super.key});
 
   @override
-  State<Profile> createState() => _ProfileState();
+  State<RestProfile> createState() => _ProfileState();
 }
 
-class _ProfileState extends State<Profile> {
+class _ProfileState extends State<RestProfile> {
   String name = '';
   String location = '';
   String dietPreference = '';
@@ -112,7 +111,6 @@ class _ProfileState extends State<Profile> {
                 child: const Text('Save'),
                 onPressed: () {
                   // Save profile information here
-                   Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => const DonateDet()));
                 },
               ),
             ),
