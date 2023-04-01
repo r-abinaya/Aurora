@@ -1,7 +1,9 @@
+import "package:aurora/pages/signup.dart";
 import "package:flutter/material.dart";
+import 'package:aurora/auth.dart';
 
-class SignUp extends StatelessWidget {
-  const SignUp({super.key});
+class LogIn extends StatelessWidget {
+  const LogIn({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -41,7 +43,9 @@ class SignUp extends StatelessWidget {
                 padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 25),
                 child: ElevatedButton(
                 onPressed: ()
-                {},
+                {
+                    
+                },
                 child: const Padding(
                     padding: EdgeInsets.all(15),
                     child:Text(
@@ -53,9 +57,27 @@ class SignUp extends StatelessWidget {
                 
               ),
               ),
+              Row(
+                 mainAxisAlignment: MainAxisAlignment.center,
+                 children: <Widget>[
+                 const Text('Does not have account?'),
+                 TextButton(
+                    child: const Text(
+                    'Sign Up',
+                    style: TextStyle(fontSize: 18),
+                    ),
+                    onPressed: () {
+                        Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => const SignUp()));
+                    },
+                  )
+                  ],
+              ),
             ]
           )
          ),
     );
   }
 }
+
+
+
