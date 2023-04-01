@@ -31,7 +31,7 @@ class _ProfileState extends State<Profile> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             const Text(
-              'Organiation Name',
+              'Organisation Name',
               style: TextStyle(
                 fontSize: 18.0,
                 fontWeight: FontWeight.bold,
@@ -112,7 +112,7 @@ class _ProfileState extends State<Profile> {
                 child: const Text('Save'),
                 onPressed: () {
                   // Save profile information here
-                   Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => const DonateDet()));
+                   Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => const Home()));
                 },
               ),
             ),

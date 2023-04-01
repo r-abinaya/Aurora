@@ -54,7 +54,7 @@ class _LogInState extends State<LogIn> {
                     Navigator.pushReplacement(
                         context,
                         MaterialPageRoute(
-                            builder: (context) => const ChooseOption()));
+                            builder: (context) => const Home()));
                   },
                   child: const Padding(
                     padding: EdgeInsets.all(15),

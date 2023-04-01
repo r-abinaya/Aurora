@@ -1,3 +1,4 @@
+import 'package:aurora/pages/pages.dart';
 import 'package:flutter/material.dart';
 
 class DonateDet extends StatefulWidget {
@@ -118,7 +119,7 @@ class _ProfileState extends State<DonateDet> {
                 ),
                 child: const Text('Save'),
                 onPressed: () {
-                  // Save profile information here
+                    Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => const Home()));
                 },
               ),
             ),
