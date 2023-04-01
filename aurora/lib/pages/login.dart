@@ -1,14 +1,19 @@
-<<<<<<< HEAD
 import "package:aurora/pages/pages.dart";
+import "package:firebase_auth/firebase_auth.dart";
 import "package:flutter/material.dart";
-import 'package:aurora/auth.dart';
-=======
-import "package:aurora/pages/signup.dart";
-import "package:flutter/material.dart";
->>>>>>> cab9c15295a45cbf717cb727c303de7afe285ec1
 
-class LogIn extends StatelessWidget {
-  const LogIn({super.key});
+class Login extends StatefulWidget {
+  const Login({super.key});
+
+  @override
+  State<Login> createState() => _LoginState();
+}
+
+class _LoginState extends State<Login> {
+  TextEditingController emailcontroller = TextEditingController();
+  TextEditingController passwordcontroller = TextEditingController();
+
+  
 
   @override
   Widget build(BuildContext context) {
@@ -47,10 +52,7 @@ class LogIn extends StatelessWidget {
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 25),
                 child: ElevatedButton(
-                onPressed: ()
-                {
-                    
-                },
+                onPressed: () => const Login(),
                 child: const Padding(
                     padding: EdgeInsets.all(15),
                     child:Text(
@@ -83,6 +85,3 @@ class LogIn extends StatelessWidget {
     );
   }
 }
-
-
-
