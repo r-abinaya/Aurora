@@ -3,3 +3,7 @@ export 'card.dart';
 export 'loading.dart';
 export 'pages.dart';
 export 'login.dart';
+export 'home.dart';
+export 'signup.dart';
+export 'pickup.dart';
+export 'done.dart';
