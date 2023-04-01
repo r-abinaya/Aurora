@@ -13,7 +13,11 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
       title: 'Aurora',
+<<<<<<< HEAD
       home: SignUp(),
+=======
+      home: Loading(),
+>>>>>>> 8b6048422b3c19be8ac4c594ad2b2e995ad4d30c
     );
   }
 }
