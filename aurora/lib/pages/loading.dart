@@ -14,7 +14,7 @@ class _LoadingState extends State<Loading> {
    void initState(){
     super.initState();
     Future.delayed(const Duration (seconds: 3), () {
-      Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => const SignIn()));
+      Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => const LogIn()));
     });
   }
 
