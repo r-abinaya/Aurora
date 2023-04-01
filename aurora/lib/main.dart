@@ -1,9 +1,8 @@
-import 'package:aurora/pages/res_profile.dart';
-import 'package:flutter/material.dart';
-import 'package:aurora/pages/pages.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'package:aurora/pages/pages.dart';
+import 'package:flutter/material.dart';
 
-void main() async{
+Future<void> main() async{
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();
   runApp(const MyApp());
