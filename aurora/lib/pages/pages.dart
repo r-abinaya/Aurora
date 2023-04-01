@@ -5,5 +5,8 @@ export 'pages.dart';
 export 'signup.dart';
 export 'profile.dart';
 export 'login.dart';
+export 'home.dart';
+export 'pickup.dart';
+export 'done.dart';
 export 'chooseopt.dart';
 export 'donateRestDet.dart';

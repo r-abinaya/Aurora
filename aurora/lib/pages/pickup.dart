@@ -1,8 +1,9 @@
+
 import "package:aurora/pages/pages.dart";
 import "package:flutter/material.dart";
 
-class LogIn extends StatelessWidget {
-  const LogIn({super.key});
+class PickUp extends StatelessWidget {
+  const PickUp({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -17,7 +18,7 @@ class LogIn extends StatelessWidget {
                 alignment: Alignment.center,
                 padding: const EdgeInsets.all(10),
                 child: const Text(
-                  'Sign in to continue',
+                  'PICKUP PERSONNAL DETAILS',
                   style: TextStyle(fontSize: 30),
                 )),
             Padding(
@@ -25,7 +26,7 @@ class LogIn extends StatelessWidget {
               child: TextFormField(
                 decoration: const InputDecoration(
                   border: UnderlineInputBorder(),
-                  labelText: 'Enter your Email id',
+                  labelText: 'Name:',
                 ),
               ),
             ),
@@ -34,50 +35,44 @@ class LogIn extends StatelessWidget {
               child: TextFormField(
                 decoration: const InputDecoration(
                   border: UnderlineInputBorder(),
-                  labelText: 'Enter your password',
+                  labelText: 'Contact:',
+                ),
+              ),
+            ),
+             Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 35, vertical: 16),
+              child: TextFormField(
+                decoration: const InputDecoration(
+                  border: UnderlineInputBorder(),
+                  labelText: 'Estimated Pickup time:',
                 ),
               ),
             ),
             Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 35, vertical: 16),
+              child: TextFormField(
+                decoration: const InputDecoration(
+                  border: UnderlineInputBorder(),
+                  labelText: 'OTP:',
+                ),
+              ),
+            ),
+             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 25),
               child: ElevatedButton(
-                  style: ButtonStyle(
-                    backgroundColor: MaterialStateProperty.all(
-                        const Color.fromRGBO(47, 155, 142, 1)),
-                  ),
                   onPressed: () {
-                    Navigator.pushReplacement(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => const ChooseOption()));
+                    Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => const Done()));
                   },
                   child: const Padding(
                     padding: EdgeInsets.all(15),
                     child: Text(
-                      'Sign In',
+                      'DONE',
                       style: TextStyle(fontSize: 20),
                     ),
+                   
                   )),
             ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: <Widget>[
-                const Text('Does not have account?'),
-                TextButton(
-                  child: const Text(
-                    'Sign Up',
-                    style: TextStyle(fontSize: 18),
-                  ),
-                  onPressed: () {
-                    Navigator.pushReplacement(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => const SignUp()));
-                  },
-                )
-              ],
-            ),
-          ])),
+            ])),
     );
   }
 }
