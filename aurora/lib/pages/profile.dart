@@ -21,10 +21,8 @@ class _ProfileState extends State<Profile> {
           icon: const Icon(Icons.arrow_back_ios_new),
           ),
         title:  const Text('PROFILE',),
-        actions: const[
-          
-        ],
-      backgroundColor:const Color.fromARGB(255, 110, 212, 159),
+        actions: const[],
+        backgroundColor:const Color.fromARGB(255, 110, 212, 159),
       ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
