@@ -1,3 +1,4 @@
+import "package:aurora/pages/pages.dart";
 import "package:flutter/material.dart";
 
 class SignUp extends StatelessWidget {
@@ -16,7 +17,7 @@ class SignUp extends StatelessWidget {
                 alignment: Alignment.center,
                 padding: const EdgeInsets.all(10),
                 child: const Text(
-                  'Sign in to continue',
+                  'Sign Up to continue',
                   style: TextStyle(fontSize: 30),
                 )),
               Padding(
@@ -37,15 +38,29 @@ class SignUp extends StatelessWidget {
                 ),
                 ),
               ),
+               Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 35, vertical: 16),
+                child: TextFormField(
+                decoration: const InputDecoration(
+                border: UnderlineInputBorder(),
+                labelText: 'Confirm your password',
+                ),
+                ),
+              ),
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 25),
                 child: ElevatedButton(
+                  style: ButtonStyle(
+                  backgroundColor: MaterialStateProperty.all(const Color.fromRGBO(47, 155, 142, 1)),
+                ),
                 onPressed: ()
-                {},
+                {
+                      Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => const ChooseOption()));
+                },
                 child: const Padding(
                     padding: EdgeInsets.all(15),
                     child:Text(
-                    'Sign In',
+                    'Sign Up',
                     style: TextStyle(fontSize: 20),
                     
                     ),
