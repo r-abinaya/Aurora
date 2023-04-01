@@ -1,4 +1,3 @@
-import 'package:aurora/pages/pages.dart';
 import 'package:flutter/material.dart';
 
 class Profile extends StatefulWidget {
@@ -31,7 +30,7 @@ class _ProfileState extends State<Profile> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             const Text(
-              'Organisation Name',
+              'Organiation Name',
               style: TextStyle(
                 fontSize: 18.0,
                 fontWeight: FontWeight.bold,
@@ -112,7 +111,7 @@ class _ProfileState extends State<Profile> {
                 child: const Text('Save'),
                 onPressed: () {
                   // Save profile information here
-                   Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => const Home()));
+                   Navigator.pushNamed(context, '/donateDet');
                 },
               ),
             ),

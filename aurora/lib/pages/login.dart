@@ -9,6 +9,9 @@ class LogIn extends StatefulWidget {
 }
 
 class _LogInState extends State<LogIn> {
+  final mail = TextEditingController();
+  final passwrd = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -28,6 +31,7 @@ class _LogInState extends State<LogIn> {
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 35, vertical: 16),
               child: TextFormField(
+                controller: mail,
                 decoration: const InputDecoration(
                   border: UnderlineInputBorder(),
                   labelText: 'Enter your Email id',
@@ -37,6 +41,7 @@ class _LogInState extends State<LogIn> {
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 35, vertical: 16),
               child: TextFormField(
+                controller: passwrd,
                 decoration: const InputDecoration(
                   border: UnderlineInputBorder(),
                   labelText: 'Enter your password',
@@ -51,10 +56,7 @@ class _LogInState extends State<LogIn> {
                         const Color.fromRGBO(47, 155, 142, 1)),
                   ),
                   onPressed: () {
-                    Navigator.pushReplacement(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => const Home()));
+                    Navigator.pushNamed(context, '/chooseOpt');
                   },
                   child: const Padding(
                     padding: EdgeInsets.all(15),
