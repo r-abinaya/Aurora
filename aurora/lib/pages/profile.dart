@@ -1,14 +1,5 @@
 import 'package:flutter/material.dart';
 
-class MyProfile extends StatefulWidget {
-  const MyProfile({super.key});
-
-  @override
-  State<MyProfile> createState() => _ProfileState();
-}
-
-class _ProfileState extends State<MyProfile> {
-
 class Profile extends StatefulWidget {
   const Profile({super.key});
 
@@ -30,14 +21,9 @@ class _ProfileState extends State<Profile> {
           icon: const Icon(Icons.arrow_back_ios_new),
           ),
         title:  const Text('PROFILE',),
-        actions: const[
-          
-        ],
-        backgroundColor: const Color.fromRGBO(47, 155, 142, 1),
-        leading: const Icon(Icons.arrow_back_ios_new),
-        title: const Center(child: Text('Profile')),
+        actions: const[],
+        backgroundColor:const Color.fromARGB(255, 110, 212, 159),
       ),
-      backgroundColor:const Color.fromARGB(255, 110, 212, 159),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
         child: Column(
