@@ -1,5 +1,5 @@
-import "package:aurora/pages/pages.dart";
 import "package:firebase_auth/firebase_auth.dart";
+import "package:aurora/pages/pages.dart";
 import "package:flutter/material.dart";
 
 class Login extends StatefulWidget {
@@ -52,7 +52,13 @@ class _LoginState extends State<Login> {
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 25),
                 child: ElevatedButton(
-                onPressed: () => const Login(),
+                style: ButtonStyle(
+                  backgroundColor: MaterialStateProperty.all(const Color.fromRGBO(47, 155, 142, 1)),
+                ),
+                onPressed: ()
+                {
+                     Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => const ChooseOption()));
+                },
                 child: const Padding(
                     padding: EdgeInsets.all(15),
                     child:Text(

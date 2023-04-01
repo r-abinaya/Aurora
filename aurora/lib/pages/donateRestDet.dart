@@ -1,14 +1,13 @@
-import 'package:aurora/pages/pages.dart';
 import 'package:flutter/material.dart';
 
-class Profile extends StatefulWidget {
-  const Profile({super.key});
+class DonateDet extends StatefulWidget {
+  const DonateDet({super.key});
 
   @override
-  State<Profile> createState() => _ProfileState();
+  State<DonateDet> createState() => _ProfileState();
 }
 
-class _ProfileState extends State<Profile> {
+class _ProfileState extends State<DonateDet> {
   String name = '';
   String location = '';
   String dietPreference = '';
@@ -21,7 +20,7 @@ class _ProfileState extends State<Profile> {
           onPressed: (){},
           icon: const Icon(Icons.arrow_back_ios_new),
           ),
-        title:  const Text('PROFILE',),
+        title:  const Text('Enter Food Details',),
         actions: const[],
         backgroundColor:const Color.fromARGB(255, 110, 212, 159),
       ),
@@ -31,7 +30,7 @@ class _ProfileState extends State<Profile> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             const Text(
-              'Organiation Name',
+              'Food Serve Quantity(No of people)',
               style: TextStyle(
                 fontSize: 18.0,
                 fontWeight: FontWeight.bold,
@@ -41,27 +40,7 @@ class _ProfileState extends State<Profile> {
             TextField(
               decoration: const InputDecoration(
                 border: OutlineInputBorder(),
-                hintText: 'Enter organisation name',
-              ),
-              onChanged: (value) {
-                setState(() {
-                  name = value;
-                });
-              },
-            ),
-            const SizedBox(height: 16.0),
-            const Text(
-              'Location',
-              style: TextStyle(
-                fontSize: 18.0,
-                fontWeight: FontWeight.bold,
-              ),
-            ),
-            const SizedBox(height: 8.0),
-            TextField(
-              decoration: const InputDecoration(
-                border: OutlineInputBorder(),
-                hintText: 'Enter your location',
+                hintText: 'Enter food quantity',
               ),
               onChanged: (value) {
                 setState(() {
@@ -71,39 +50,67 @@ class _ProfileState extends State<Profile> {
             ),
             const SizedBox(height: 16.0),
             const Text(
-              'Dietary Preference',
+              'Food Cooked Time',
               style: TextStyle(
                 fontSize: 18.0,
                 fontWeight: FontWeight.bold,
               ),
             ),
             const SizedBox(height: 8.0),
-            Row(
-              children: [
-                Radio(
-                  value: 'Vegetarian',
-                  groupValue: dietPreference,
-                  onChanged: (value) {
-                    setState(() {
-                      dietPreference = value.toString();
-                    });
-                  },
-                ),
-                const Text('Vegetarian'),
-                const SizedBox(width: 16.0),
-                Radio(
-                  value: 'Non-vegetarian',
-                  groupValue: dietPreference,
-                  onChanged: (value) {
-                    setState(() {
-                      dietPreference = value.toString();
-                    });
-                  },
-                ),
-                const Text('Non-vegetarian'),
-              ],
+            TextField(
+              decoration: const InputDecoration(
+                border: OutlineInputBorder(),
+                hintText: 'Enter cooked time',
+              ),
+              onChanged: (value) {
+                setState(() {
+                  location = value;
+                });
+              },
             ),
-            const SizedBox(height: 32.0),
+            const SizedBox(height: 16.0),
+             const Text(
+              'Food Expiry Time',
+              style: TextStyle(
+                fontSize: 18.0,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+            const SizedBox(height: 8.0),
+            TextField(
+              decoration: const InputDecoration(
+                border: OutlineInputBorder(),
+                hintText: 'Enter expiry time',
+              ),
+              onChanged: (value) {
+                setState(() {
+                  location = value;
+                });
+              },
+            ),
+            const SizedBox(height: 16.0),
+            const Text(
+              'Food Description',
+              style: TextStyle(
+                fontSize: 18.0,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+            const SizedBox(height: 8.0),
+            TextField(
+              decoration: const InputDecoration(
+                border: OutlineInputBorder(),
+                hintText: 'Eg:Rice,sambar,etc..',
+              ),
+              onChanged: (value) {
+                setState(() {
+                  name = value;
+                });
+              },
+            ),
+            const SizedBox(height: 16.0),
+          
+            
             Center(
               child: ElevatedButton(
                 style: ButtonStyle(
@@ -112,7 +119,6 @@ class _ProfileState extends State<Profile> {
                 child: const Text('Save'),
                 onPressed: () {
                   // Save profile information here
-                   Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => const DonateDet()));
                 },
               ),
             ),

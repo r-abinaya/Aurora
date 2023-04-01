@@ -7,3 +7,4 @@ export 'profile.dart';
 export 'login.dart';
 //export 'firebase.dart';
 export 'chooseopt.dart';
+export 'donateRestDet.dart';
