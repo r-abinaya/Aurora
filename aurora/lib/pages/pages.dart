@@ -3,3 +3,4 @@ export 'card.dart';
 export 'loading.dart';
 export 'pages.dart';
 export 'signup.dart';
+export 'profile.dart';
