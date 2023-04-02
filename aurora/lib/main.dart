@@ -1,4 +1,4 @@
-import 'package:firebase_core/firebase_core.dart';
+import 'package:flutter/material.dart';
 import 'package:aurora/pages/pages.dart';
 
 void main() {
@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primaryColor: const Color.fromARGB(255, 110, 212, 159),
       ),
-      routes:{
+      routes: {
         '/': (context) => const Loading(),
         '/login': (context) => const LogIn(),
         '/chooseOpt': (context) => const ChooseOption(),
@@ -28,7 +28,6 @@ class MyApp extends StatelessWidget {
         '/home': (context) => const Home(),
         '/pickup': (context) => const PickUp(),
         '/res_profile': (context) => const Profile(),
-
       },
     );
   }
