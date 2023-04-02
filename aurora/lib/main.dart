@@ -1,16 +1,12 @@
-import 'package:firebase_core/firebase_core.dart';
-import 'package:aurora/pages/pages.dart';
 import 'package:flutter/material.dart';
+import 'package:aurora/pages/pages.dart';
 
-Future<void> main() async{
-  WidgetsFlutterBinding.ensureInitialized();
-  await Firebase.initializeApp();
+void main() {
   runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
-  
 
   // This widget is the root of your application.
   @override
@@ -22,7 +18,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primaryColor: const Color.fromARGB(255, 110, 212, 159),
       ),
-      routes:{
+      routes: {
         '/': (context) => const Loading(),
         '/login': (context) => const LogIn(),
         '/chooseOpt': (context) => const ChooseOption(),
@@ -32,7 +28,6 @@ class MyApp extends StatelessWidget {
         '/home': (context) => const Home(),
         '/pickup': (context) => const PickUp(),
         '/res_profile': (context) => const Profile(),
-
       },
     );
   }

@@ -1,9 +1,22 @@
 import "package:aurora/pages/pages.dart";
 import "package:flutter/material.dart";
 
-class Done extends StatelessWidget {
+class Done extends StatefulWidget {
   const Done({super.key});
+
   @override
+  State<Done> createState() => _DoneState();
+}
+
+class _DoneState extends State<Done> {
+  @override
+   void initState(){
+    super.initState();
+    Future.delayed(const Duration (seconds: 3), () {
+      Navigator.pushNamed(context, '/thanks');
+    });
+  }
+@override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: const Color.fromARGB(255, 110, 212, 159),

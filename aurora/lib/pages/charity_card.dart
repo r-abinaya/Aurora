@@ -1,4 +1,5 @@
 import "package:flutter/material.dart";
+import 'package:aurora/pages/pages.dart';
 
 class CharityCard extends StatelessWidget {
   const CharityCard({super.key});
